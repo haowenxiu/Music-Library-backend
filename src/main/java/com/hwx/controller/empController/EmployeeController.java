@@ -45,8 +45,7 @@ public class EmployeeController {
 		List<Employee> emps = employeeService.getAll();
 		@SuppressWarnings({ "rawtypes", "unchecked" })
 		// 使用PageInfo包装查询后的结果，只需要将pageInfo交给页面 封装了详细的分页信息 连续显示的页数
-		PageInfo page = new PageInfo(emps, 5);
-
+		PageInfo page = new PageInfo(emps, 3);
 		return Msg.success().add("info", page);
 	}
 
