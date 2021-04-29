@@ -17,7 +17,7 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
 
 import com.github.pagehelper.PageInfo;
-import com.hwx.pojo.employee.Employee;
+import com.hwx.pojo.Employee;
 
 /*
  * 使用Spring模块的测试请求功能，测试请求的正确性

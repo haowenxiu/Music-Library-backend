@@ -3,34 +3,38 @@ package com.hwx.pojo.msg;
 import java.util.HashMap;
 import java.util.Map;
 
+/*
+ * 专门用来返回json数据的类
+ * 
+ */
 public class Msg {
 
-//	响应状态码
+	// 响应状态码 100--表示成功 200--表示失败
 	private int code;
-//	响应信息成功或是失败
+	// 响应信息 成功或是失败
 	private String msg;
-//	存放数据
+	// 用户要返回给浏览器的数据 存放数据
 	private Map<String, Object> extend = new HashMap<String, Object>();
 
-	// 成功
+	// 代表请求成功
 	public static Msg success() {
 
-		Msg m = new Msg();
-		m.setCode(200);
-		m.setMsg("处理成功");
-		return m;
+		Msg result = new Msg();
+		result.setCode(100);
+		result.setMsg("处理成功");
+		return result;
 	}
 
-	// 失败
+	// 代表请求失败
 	public static Msg fail() {
 
-		Msg m = new Msg();
-		m.setCode(400);
-		m.setMsg("处理失败");
-		return m;
+		Msg result = new Msg();
+		result.setCode(200);
+		result.setMsg("处理失败");
+		return result;
 	}
 
-	// 添加数据
+	// 添加数据 链式方式返回的核心就是返回(this)当前对象
 	public Msg add(String key, Object value) {
 		this.getExtend().put(key, value);
 		return this;

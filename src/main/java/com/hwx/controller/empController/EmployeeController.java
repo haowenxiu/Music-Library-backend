@@ -34,7 +34,7 @@ public class EmployeeController {
 	@RequestMapping("/emps")
 	@ResponseBody
 	@CrossOrigin(origins = "*", maxAge = 3600)
-	public Msg getEmpWidthJson(@RequestParam(value = "pn", defaultValue = "1") Integer pn, Model model) {
+	public Msg getEmpWidthJson(@RequestParam(value = "pn", defaultValue = "1") Integer pn) {
 
 		System.out.println(pn);
 		// 引入PageHelper分页插件

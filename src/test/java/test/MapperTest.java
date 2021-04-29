@@ -12,7 +12,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import com.hwx.dao.DepartmentMapper;
 import com.hwx.dao.EmployeeMapper;
 import com.hwx.pojo.Department;
-import com.hwx.pojo.employee.Employee;
+import com.hwx.pojo.Employee;
 
 /**
  * 测试dao层工作 导入SpringTest模块
